@@ -1,6 +1,6 @@
 <template>
   <div class="xianmian">
-    <h1>这里是限免课程</h1>
+    <h1>这里是限免课程的内容</h1>
   </div>
 </template>
 

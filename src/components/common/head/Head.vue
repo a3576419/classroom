@@ -1,23 +1,21 @@
 <template>
   <div class="head banxin">
     <!--    logo部分-->
-    <img src="~assets/img/home/logo.jpg" alt="">
+    <img src="~assets/img/home/logo.jpg" alt="" class="imgg">
     <span>快乐课堂</span>
-
-    <div class="xuanxiang">
-      <router-link to="/home">首页               </router-link>
-      <router-link to="/jingpin">精品自学课       </router-link>
-      <router-link to="/xianmian">限免课程        </router-link>
-      <router-link to="/kuajing">跨境资讯         </router-link>
-      <router-view></router-view>
+    <div class="head-center">
+      <router-link style="margin-left: 60px" to="/home">首页&nbsp;&nbsp;&nbsp;</router-link>
+      <router-link style="margin-left: 40px" to="/jingpin">精品自学课&nbsp;&nbsp;&nbsp;</router-link>
+      <router-link style="margin-left: 40px" to="/xianmian">限免课程&nbsp;&nbsp;&nbsp;</router-link>
+      <router-link style="margin-left: 40px" to="/kuajing">跨境资讯&nbsp;&nbsp;&nbsp;</router-link>
     </div>
 
     <div class="head-right" >
       <router-link  to="/login">登录</router-link>|
       <router-link to="/logup">注册</router-link>
-<!--      <router-view></router-view>-->
+      <!--      <router-view></router-view>-->
     </div>
-
+    <router-view></router-view>
   </div>
 </template>
 
@@ -29,31 +27,31 @@
 
 <style scoped>
   .head{
-    display: flex;
-    text-align: center;
     font-size: 18px;
-    height:40px;
+    /*height:40px;*/
     background-color: white;
-    align-items: center;
     color: black;
   }
-  .head img{
+  .imgg{
     width: 60px;
     height: 60px;
   }
   .head span{
     font-size: 25px;
   }
-  .xuanxiang{
+  .head-center{
     margin-left: 50px;
+    display: inline;
   }
-  .head-right{
-    position: absolute;
-    right: 20px;}
-  .xuanxiang .router-link-active{
+  .head-center .router-link-active{
     border-bottom: solid 3px pink;
     padding: 8px;
     font-size: 20px;
+    margin-top: 10px;
+  }
+  .head-right{
+    float: right;
+    right: 20px;
   }
 
 </style>

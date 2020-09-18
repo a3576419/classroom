@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-<h1>aaaaaaaaaaaaaaaa</h1>
+<h1>登录内容</h1>
   </div>
 
 </template>

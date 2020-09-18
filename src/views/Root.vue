@@ -1,7 +1,6 @@
 <template>
   <div class="root">
     <Head></Head>
-
   </div>
 </template>
 

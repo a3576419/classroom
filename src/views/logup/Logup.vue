@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    <H1>这里是注册内容</H1>
+  </div>
 </template>
 
 <script>

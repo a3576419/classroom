@@ -1,6 +1,6 @@
 <template>
 <div class="kuajing">
-  <h1>这里是跨境资讯</h1>
+  <h1>这里是跨境资讯的内容</h1>
 </div>
 </template>
 
