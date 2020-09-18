@@ -5,9 +5,9 @@
 ul,ol{
 	list-style: none;
 }
-img{
-	display: block;
-}
+/*img{*/
+/*	display: block;*/
+/*}*/
 a{
 	text-decoration: none;
 	color: #646464;
