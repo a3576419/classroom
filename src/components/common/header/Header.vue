@@ -16,7 +16,7 @@
 <!--      </div>-->
 <!--    </div>-->
 
-    <table class="head">
+    <table class="head banxin">
       <tr>
         <td>
           <table>
@@ -28,10 +28,10 @@
                 <strong>快乐课堂</strong>
               </td>
               <td class="head-center">
-                <router-link style="margin-left: 60px" to="/home">首页</router-link>
-                <router-link style="margin-left: 40px" to="/jingpin">精品自学课</router-link>
-                <router-link style="margin: 40px" to="/xianmian">限免课程</router-link>
-                <router-link style="margin-right: 500px" to="/kuajing">跨境资讯</router-link>
+                <router-link to="/home"    style="margin-left: 60px">首页</router-link>
+                <router-link to="/jingPin" style="margin-left: 40px">精品自学课</router-link>
+                <router-link to="/xianMian"style="margin: 40px">限免课程</router-link>
+                <router-link to="/kuaJing" style="margin-right: 400px">跨境资讯</router-link>
               </td>
               <td class="head-right">
                 <router-link to="/login">登录 |</router-link>
@@ -42,7 +42,6 @@
         </td>
       </tr>
     </table>
-
     <router-view></router-view>
   </div>
 </template>
@@ -93,7 +92,6 @@
 
   /*}*/
   .head{
-    margin: 0 auto;
     font-size: 18px;
   }
   .head img{

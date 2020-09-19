@@ -1,15 +1,15 @@
 <template>
   <div class="root">
-    <Head></Head>
+    <Header></Header>
   </div>
 </template>
 
 <script>
-  import Head from "@/components/common/head/Head";
+  import Header from "@/components/common/header/Header";
   export default {
     name: "Root",
     components:{
-      Head
+      Header
     }
   }
 </script>
