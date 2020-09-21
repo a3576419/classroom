@@ -1,12 +1,17 @@
 <template>
   <div class="yamaxun">
-    这里是亚马逊课程的内容
+    <GoodsList></GoodsList>
   </div>
 </template>
 
 <script>
+  // 导入封装的商品列表组件
+  import GoodsList from "@/components/content/goods/GoodsList"
   export default {
-    name: ""
+    name: "",
+    components:{
+      GoodsList
+    },
   }
 </script>
 

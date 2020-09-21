@@ -4,6 +4,7 @@
   <div class="jingpin-img">
     <img src="~assets/img/temporary/course_top_banner.png" alt="">
   </div>
+<!-- 课程分类选项卡-->
   <table class="jingpin-tab banxin">
     <tr>
       <td>
@@ -11,27 +12,50 @@
           <tr>
             <td><span>分类:</span></td>
             <td>
-              <router-link to="/jingPin/all"      style="margin-left: 60px">全部</router-link>
-              <router-link to="/jingPin/yingXiao" style="margin-left: 40px">电商营销</router-link>
-              <router-link to="/jingPin/yaMaXun"  style="margin-left: 40px">亚马逊课程</router-link>
-              <router-link to="/jingPin/kuaJing"  style="margin-left: 40px">跨境电商</router-link>
+              <router-link :to="{path:'/jingPin/all',query:{goods}}" style="margin-left: 60px">全部</router-link>
+              <router-link :to="{path:'/jingPin/yingXiao',query:{goods:goods_yingxiao}}" style="margin-left: 60px">电商营销</router-link>
+              <router-link :to="{path:'/jingPin/yaMaXun',query:{goods:goods_yamaxun}}"  style="margin-left: 40px">亚马逊课程</router-link>
+              <router-link :to="{path:'/jingPin/kuaJing',query:{goods:goods_kuajing}}"  style="margin-left: 40px">跨境电商</router-link>
             </td>
           </tr>
         </table>
       </td>
     </tr>
   </table>
-<!--  <router-link to="/jingPin/all"      style="margin-left: 60px">全部</router-link>-->
-<!--  <router-link to="/jingPin/yingXiao" style="margin-left: 40px">电商营销</router-link>-->
-<!--  <router-link to="/jingPin/yaMaXun"  style="margin-left: 40px">亚马逊课程</router-link>-->
-<!--  <router-link to="/jingPin/kuaJing"  style="margin-left: 40px">跨境电商</router-link>-->
   <router-view></router-view>
 </div>
 </template>
 
 <script>
+  import {getCourseList} from "@/network/JingPin";
   export default {
-    name: "JingPin"
+    name: "JingPin",
+    data(){
+      return{
+        // 保存课程数据
+        // goods:{
+        //   // 'All':{page:0,list:[]},
+        //   'all':{list:[]},
+        //   'dianShang':{list:[]},
+        //   'yaMaXun':{list:[]},
+        //   'kuaJing':{list:[]},
+        // }
+        goods: [],
+        goods_yingxiao:[],
+        goods_yamaxun:[],
+        goods_kuajing:[],
+      }
+    },
+    //请求课程数据
+    created() {
+      getCourseList().then(res=>{
+        console.log(res)
+       this.goods.push(...res.data.goods)
+       this.goods_yingxiao.push(this.goods[2])
+       this.goods_yamaxun.push(this.goods[1])
+       this.goods_kuajing.push(this.goods[0])
+      })
+    },
   }
 </script>
 

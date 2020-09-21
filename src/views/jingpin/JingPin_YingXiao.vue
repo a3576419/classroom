@@ -1,12 +1,17 @@
 <template>
   <div class="">
-    这里是电商营销的内容
+    <GoodsList></GoodsList>
   </div>
 </template>
 
 <script>
+  // 导入封装的商品列表组件
+  import GoodsList from "@/components/content/goods/GoodsList"
   export default {
-    name: ""
+    name: "",
+    components:{
+      GoodsList
+    },
   }
 </script>
 

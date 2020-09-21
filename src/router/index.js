@@ -35,10 +35,12 @@ const routes = [
   },
   {
     path: '/home',
+    name: '首页',
     component: Home
   },
   {
     path: '/jingPin',
+    name: '精品自学课程',
     component: JingPin,
     children:[
         {
@@ -62,18 +64,22 @@ const routes = [
   },
   {
     path: '/xianMian',
+    name: '限免课程',
     component: XianMian
   },
   {
     path: '/kuaJing',
+    name: '跨境资讯',
     component: KuaJing
   },
   {
     path: '/login',
+    name: '登录',
     component: Login
   },
   {
     path: '/logup',
+    name: '注册',
     component: Logup
   },
 ]

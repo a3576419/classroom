@@ -1,8 +1,7 @@
 <template>
   <div class="login">
-<h1>登录内容</h1>
+    登录
   </div>
-
 </template>
 
 <script>
