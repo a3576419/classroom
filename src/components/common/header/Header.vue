@@ -9,7 +9,7 @@
                 <strong>快乐课堂</strong>
               </td>
               <td class="head-center">
-                <router-link to="/home"    style="margin-left: 60px" >首页</router-link>
+                <router-link to="/home"    style="margin-left: 20px" >首页</router-link>
                 <router-link to="/jingPin" style="margin-left: 40px">精品自学课</router-link>
                 <router-link to="/xianMian"style="margin: 40px">限免课程</router-link>
                 <router-link to="/kuaJing" style="margin-right: 400px">跨境资讯</router-link>
@@ -32,15 +32,15 @@
 
 <style scoped>
   .head{
-    height: 65px;
-    font-size: 20px;
+    height: 120px;
+    font-size: 23px;
   }
   .head img{
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
   }
   .head strong{
-    font-size: 28px;
+    font-size: 35px;
     color: black;
   }
   .head-center .router-link-active {

@@ -23,37 +23,58 @@ const routes = [
   {
     path: '',
     name: '重定向',
-    redirect:'/home'
+    redirect:'/home',
+    meta:{
+      title:'首页'
+    }
   },
   {
     path: '/home',
     name: '首页',
-    component: Home
+    component: Home,
+    meta:{
+      title:'首页'
+    }
   },
   {
     path: '/jingPin',
     name: '精品自学课程',
     component: JingPin,
+    meta:{
+      title:'精品自学课程'
+    }
   },
   {
     path: '/xianMian',
     name: '限免课程',
-    component: XianMian
+    component: XianMian,
+    meta:{
+      title:'限免课程'
+    }
   },
   {
     path: '/kuaJing',
     name: '跨境资讯',
-    component: KuaJing
+    component: KuaJing,
+    meta:{
+      title:'跨境资讯'
+    }
   },
   {
     path: '/login',
     name: '登录',
-    component: Login
+    component: Login,
+    meta:{
+      title:'登录'
+    }
   },
   {
     path: '/logup',
     name: '注册',
-    component: Logup
+    component: Logup,
+    meta:{
+      title:'注册'
+    }
   },
 ]
 
@@ -61,5 +82,13 @@ const router = new VueRouter({
   routes,
   mode:'history'
 })
+
+// 全局导航守卫修改页面标题
+router.beforeEach((to,from,next)=>{
+  // 从from跳转到to
+  document.title=to.matched[0].meta.title;
+  next()
+})
+
 
 export default router

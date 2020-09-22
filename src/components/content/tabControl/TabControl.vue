@@ -37,7 +37,7 @@
 <style scoped>
   .tab-control{
     display: flex;
-    font-size: 25px;
+    font-size: 28px;
   }
   .fenLei{
     margin-right: 60px;
