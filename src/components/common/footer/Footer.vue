@@ -27,6 +27,9 @@
 </script>
 
 <style scoped>
+  .footer{
+    /*position: relative;*/
+  }
   .foot{
     height: 200px;
     text-align: center;

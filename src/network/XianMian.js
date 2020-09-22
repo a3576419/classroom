@@ -1,7 +1,7 @@
 import{request} from "@/network/request";
 export function getCourseList(){
   return request({
-    url:'index/courseList',
+    url:'',
     method:"POST"
   })
 }

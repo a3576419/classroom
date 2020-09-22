@@ -9,7 +9,6 @@ import VueRouter from 'vue-router'
 // import JingPin_Yingxiao from "@/views/jingpin/JingPin_YingXiao";
 // import JingPin_YaMaXun from "@/views/jingpin/JingPin_YaMaXun";
 // import JingPin_KuaJing from "@/views/jingpin/JingPin_KuaJing";
-
 // 路由懒加载
 const Home = () =>import('@/views/home/Home')
 const JingPin = () =>import('@/views/jingpin/JingPin')
@@ -17,13 +16,6 @@ const XianMian = () =>import('@/views/xianmian/XianMian')
 const KuaJing = () =>import('@/views/kuajing/KuaJing')
 const Login = () =>import('@/views/login/Login')
 const Logup = () =>import('@/views/logup/Logup')
-
-const JingPin_All = () =>import('@/views/jingpin/JingPin_All')
-const JingPin_Yingxiao = () =>import('@/views/jingpin/JingPin_YingXiao')
-const JingPin_YaMaXun = () =>import('@/views/jingpin/JingPin_YaMaXun')
-const JingPin_KuaJing = () =>import('@/views/jingpin/JingPin_KuaJing')
-
-
 
 Vue.use(VueRouter)
 
@@ -42,25 +34,6 @@ const routes = [
     path: '/jingPin',
     name: '精品自学课程',
     component: JingPin,
-    children:[
-        {
-          path:'all',
-          component: JingPin_All,
-        },
-        {
-          path:'yingXiao',
-          component: JingPin_Yingxiao,
-        },
-        {
-          path:'yaMaXun',
-          component: JingPin_YaMaXun,
-        },
-        {
-          path:'kuaJing',
-          component: JingPin_KuaJing,
-        },
-
-    ]
   },
   {
     path: '/xianMian',

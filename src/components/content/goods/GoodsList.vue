@@ -1,8 +1,6 @@
 <template>
 <div class="goodslist banxin">
-<!--  打印数据测试-->
-<!--  {{goodsdata}}-->
-  <GoodsListItem v-for="item in goodsdata" :goodsitem="item"></GoodsListItem>
+  <GoodsListItem v-for="(item,index) in goods" :goodsitem="item" :key="index"></GoodsListItem>
 </div>
 </template>
 
@@ -10,23 +8,18 @@
   import GoodsListItem from "@/components/content/goods/GoodsListItem";
   export default {
     name: "",
-    // 接收传来的数组
-    // props:{
-    //   goodsitem:{
-    //     type:Object,
-    //     default(){
-    //       return[]
-    //     }
-    //   }
-    // },
-    data(){
-      return{
-        goodsdata:this.$route.query.goods,
+    props:{
+      goods:{
+        type:Array,
+        default(){
+          return[]
+        }
       }
     },
     components:{
       GoodsListItem
-    }
+    },
+
   }
 
 </script>
