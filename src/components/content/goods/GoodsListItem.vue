@@ -38,13 +38,17 @@
   }
   .goods_info{
     /*给最外边设置边框*/
-    width: 310px;
-    border: solid 2px gainsboro;
+    /*width: 310px;*/
+    /*border: solid 3px gainsboro;*/
+    width: 363px;
+    border: solid 3px gainsboro;
   }
  .goods_info img{
    /*图片宽度沾满整个框*/
-   width: 100%;
-   height: 150px;
+   /*width: 100%;*/
+   /*height: 150px;*/
+   width: 360px;
+   height: 180px;
    margin-bottom: 15px;
  }
  .goods_info p{

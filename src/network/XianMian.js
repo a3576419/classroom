@@ -1,5 +1,5 @@
 import{request} from "@/network/request";
-export function getCourseList(){
+export function getXianMianList(){
   return request({
     url:'index/courseList',
     method:"POST",

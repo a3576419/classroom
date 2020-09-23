@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import {getCourseList} from "@/network/JingPin";
+  import {getJingPinList} from "@/network/JingPin";
   import TabControl from "@/components/content/tabControl/TabControl";
   import GoodsList from "@/components/content/goods/GoodsList";
   export default {
@@ -37,7 +37,7 @@
     },
     //请求课程数据
     created() {
-      let then = getCourseList().then(res=>{
+      let then = getJingPinList().then(res=>{
         // '精品自学课的数据请求结果'
         console.log(res)
         this.goods.goods_all.push(...res.data.goods)

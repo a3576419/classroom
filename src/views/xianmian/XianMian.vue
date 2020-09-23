@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import {getCourseList} from "@/network/XianMian";
+  import {getXianMianList} from "@/network/XianMian";
   import GoodsList from "@/components/content/goods/GoodsList";
   export default {
     name: "XianMian",
@@ -19,7 +19,7 @@
     },
     //请求课程数据
     created() {
-      let then = getCourseList().then(res=>{
+      let then = getXianMianList().then(res=>{
         // '精品自学课的数据请求结果'
         console.log(res);
         this.goods.push(...res.data.data)
