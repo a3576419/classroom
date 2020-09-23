@@ -43,7 +43,8 @@
         </li>
       </ul>
     </div>
-<!--      精品自学课标题-->
+
+<!-- 精品自学课标题-->
     <table class="Course_title banxin">
       <tr>
         <td>
@@ -58,18 +59,27 @@
         </td>
       </tr>
     </table>
-<!-- 精品视频展示   -->
-    <div class="jingpin_show banxin">
+<!-- 精品课程展示   -->
+    <div class="Course_show banxin">
       <div class="left">
-        <GoodsList :goods="goods.goods_kuajing" class="left_GoodsList"></GoodsList>
+        <a href="http://www.zhao100.cn/paidCourseInfo/43">
+          <img :src="goods.goods_kuajing[0].cover_url" alt=""  />
+          <p>{{ goods.goods_kuajing[0].title }}</p>
+          <span class="subtitle">{{ goods.goods_kuajing.subtitle }}</span>
+          <div class="down">
+            <span class="price">￥{{ goods.goods_kuajing[0].price }}</span>
+            <del class="market_price">￥{{ goods.goods_kuajing[0].market_price }}</del>
+          </div>
+        </a>
       </div>
       <div class="right">
-        <GoodsList :goods="goods.goods_yingxiao"></GoodsList>
-        <GoodsList :goods="goods.goods_yamaxun"></GoodsList>
+        <!-- 首页精品自学课右边课程item-->
+        <HomeProduct_itemList :goodsitem="goods.goods_yamaxun[0]"></HomeProduct_itemList>
+        <HomeProduct_itemList :goodsitem="goods.goods_yingxiao[0]"></HomeProduct_itemList>
       </div>
     </div>
 
- <!--      限免课标题-->
+ <!-- 限免课标题-->
     <table class="Course_title banxin">
       <tr>
         <td>
@@ -84,11 +94,22 @@
         </td>
       </tr>
     </table>
-
-    <div class="xianmian_show">
-      <GoodsList :goods="xianMian_goods"></GoodsList>
+<!-- 限免课程展示-->
+    <div class="Course_show banxin">
+      <div class="xianmian_left">
+      <a href="http://www.zhao100.cn/paidCourseInfo/43">
+        <img :src="xianMian_goods[0].cover_url" alt=""  />
+<!--                                                                      这里报错-->
+        <p>{{xianMian_goods[0].title}}</p>
+        <span class="subtitle">{{ xianMian_goods.subtitle }}</span>
+        <div class="down">
+          <span class="price">￥{{ xianMian_goods[0].price }}</span>
+          <del class="market_price">￥{{ xianMian_goods[0].market_price }}</del>
+        </div>
+      </a>
+      </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -97,7 +118,10 @@
   import {getJingPinList} from "@/network/JingPin";
   // 获取限免视频数据
   import {getXianMianList} from "@/network/XianMian";
+  // 课程展示
   import GoodsList from "@/components/content/goods/GoodsList";
+  //首页精品自学课右边课程item
+  import HomeProduct_itemList from "@/components/common/homeProduct_itemList/HomeProduct_itemList";
   export default {
   name: 'Home',
     data(){
@@ -114,7 +138,8 @@
   components: {
     // Swiper,
     // SwiperItem
-    GoodsList
+    GoodsList,
+    HomeProduct_itemList
   },
     //请求课程数据
     created() {
@@ -125,10 +150,11 @@
         this.goods.goods_yingxiao.push(this.goods.goods_all[2])
         this.goods.goods_yamaxun.push(this.goods.goods_all[1])
         this.goods.goods_kuajing.push(this.goods.goods_all[0])
+        console.log(this.goods.goods_yamaxun);
       });
       getXianMianList().then(res=>{
-        // '精品自学课的数据请求结果'
-        console.log(res);
+        // '限免课的数据请求结果'
+        // console.log(res);
         this.xianMian_goods.push(...res.data.data)
         console.log(this.xianMian_goods);
       });
@@ -165,7 +191,8 @@
   /*课程标题（共用）*/
   .Course_title{
     /*设置标题上边距*/
-    padding-top: 30px;
+
+    padding: 30px 0px;
   }
   .Course_title strong{
     color: #5babfa;
@@ -184,16 +211,53 @@
     float: right;
   }
   /*精品视频展示*/
-  .jingpin_show{
+  .Course_show{
     margin-bottom: 100px;
   }
-
-  .left_GoodsList{
-    width: 100%;
-    height: 100%;
+  .Course_show .left{
+    width: 40%;
   }
-  .jingpin_show .right{
-    width: 50%;
+  .Course_show .right{
+    width: 60%;
     display: flex;
+  }
+
+  /*课程展示（共用）*/
+  .xianmian_left{
+   width: 40%;
+  }
+  .Course_show img{
+    width: 98%;
+    height: 100%;
+    margin-bottom: 15px;
+  }
+  .Course_show p{
+    /*标题*/
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+  }
+  .subtitle{
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  .price{
+    /*价格*/
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+    margin-left: 12px;
+  }
+  /*带横线的价格*/
+  .Course_show del{
+    color: #a9a9aa;
+    margin: 25px;
+  }
+  /*最下面三行*/
+  .down{
+    font-size: 25px;
+    margin-top: 20px;
   }
 </style>
