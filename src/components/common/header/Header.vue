@@ -3,7 +3,7 @@
           <table class="head banxin">
             <tr>
               <td>
-                <img src="~assets/img/home/logo.jpg" alt="" class="image">
+                <img src="~assets/img/home/logo.png" alt="" class="image">
               </td>
               <td>
                 <strong>快乐课堂</strong>
@@ -36,8 +36,8 @@
     font-size: 23px;
   }
   .head img{
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
   }
   .head strong{
     font-size: 35px;

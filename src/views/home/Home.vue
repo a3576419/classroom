@@ -65,7 +65,6 @@
         <a href="http://www.zhao100.cn/paidCourseInfo/43">
           <img :src="goods.goods_kuajing[0].cover_url" alt=""  />
           <p>{{ goods.goods_kuajing[0].title }}</p>
-          <span class="subtitle">{{ goods.goods_kuajing.subtitle }}</span>
           <div class="down">
             <span class="price">￥{{ goods.goods_kuajing[0].price }}</span>
             <del class="market_price">￥{{ goods.goods_kuajing[0].market_price }}</del>
@@ -101,7 +100,6 @@
         <img :src="xianMian_goods[0].cover_url" alt=""  />
 <!--                                                                      这里报错-->
         <p>{{xianMian_goods[0].title}}</p>
-        <span class="subtitle">{{ xianMian_goods.subtitle }}</span>
         <div class="down">
           <span class="price">￥{{ xianMian_goods[0].price }}</span>
           <del class="market_price">￥{{ xianMian_goods[0].market_price }}</del>
@@ -145,12 +143,12 @@
     created() {
       getJingPinList().then(res=>{
         // '精品自学课的数据请求结果'
-        console.log(res)
+        // console.log(res)
         this.goods.goods_all.push(...res.data.goods)
         this.goods.goods_yingxiao.push(this.goods.goods_all[2])
         this.goods.goods_yamaxun.push(this.goods.goods_all[1])
         this.goods.goods_kuajing.push(this.goods.goods_all[0])
-        console.log(this.goods.goods_yamaxun);
+        console.log(this.goods.goods_kuajing);
       });
       getXianMianList().then(res=>{
         // '限免课的数据请求结果'
@@ -239,10 +237,7 @@
     text-overflow: ellipsis;
     margin-bottom: 8px;
   }
-  .subtitle{
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
+
   .price{
     /*价格*/
     font-size: 40px;
