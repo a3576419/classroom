@@ -4,8 +4,6 @@ import qs from "qs";
 export function request(my_config) {
   // 1.创建实例
   const instance = axios.create({
-    // baseURL: "http://123.207.32.32:8000",
-    // baseURL: "http://192.168.0.105:3000", //手机检测时，换该地址
     baseURL: 'http://api.zhao100.cn/index/',
     timeout: 5000
   });

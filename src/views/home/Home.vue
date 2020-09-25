@@ -8,6 +8,11 @@
 <!--      </SwiperItem>-->
 <!--    </Swiper>-->
 
+<!--    轮播图-->
+    <div class="banner banxin">
+      <ElCarousel></ElCarousel>
+    </div>
+
 <!--    课堂介绍-->
     <div class="home_show banxin">
       <ul>
@@ -107,10 +112,13 @@
       </a>
       </div>
     </div>
+    <Footer></Footer>
     </div>
 </template>
 
 <script>
+  // 头部
+  import Header from "@/components/common/header/Header";
   // import {Swiper, SwiperItem } from "@/components/content/swiper";
   // 获取精品视频数据
   import {getJingPinList} from "@/network/JingPin";
@@ -119,7 +127,12 @@
   // 课程展示
   import GoodsList from "@/components/content/goods/GoodsList";
   //首页精品自学课右边课程item
-  import HomeProduct_itemList from "@/components/common/homeProduct_itemList/HomeProduct_itemList";
+  import HomeProduct_itemList from "@/components/content/homeProduct_itemList/HomeProduct_itemList";
+  //轮播图
+  import ElCarousel from "@/components/content/elCarousel/ElCarousel";
+  //底部
+  import Footer from "@/components/common/footer/Footer";
+
   export default {
   name: 'Home',
     data(){
@@ -130,14 +143,17 @@
           goods_yamaxun:[],
           goods_kuajing:[],
         },
-        xianMian_goods:[]
+        xianMian_goods:[],
       }
     },
   components: {
     // Swiper,
     // SwiperItem
+    Header,
     GoodsList,
-    HomeProduct_itemList
+    HomeProduct_itemList,
+    ElCarousel,
+    Footer
   },
     //请求课程数据
     created() {
@@ -148,7 +164,6 @@
         this.goods.goods_yingxiao.push(this.goods.goods_all[2])
         this.goods.goods_yamaxun.push(this.goods.goods_all[1])
         this.goods.goods_kuajing.push(this.goods.goods_all[0])
-        console.log(this.goods.goods_kuajing);
       });
       getXianMianList().then(res=>{
         // '限免课的数据请求结果'
@@ -157,6 +172,12 @@
         console.log(this.xianMian_goods);
       });
     },
+    methods:{
+      linkTo () {
+        let activeIndex = this.$refs.carousel.activeIndex
+        this.$router.push(this.imgs[activeIndex].link)
+      }
+    }
 }
 </script>
 <style scoped>
@@ -164,10 +185,17 @@
     height: 100%;
     color: black;
   }
+  /*顶部轮播Banner*/
+    .banner{
+      border-radius: 30px;
+      margin-top: 14px;
+      /*width: 100%;*/
+      height: 400px;
+  }
   /*课堂介绍*/
   .home_show ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .home_show img{
     width: 80px;
@@ -176,11 +204,11 @@
     margin-right: 15px;
   }
   .home_show span{
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 10px;
   }
   .home_show p{
-    font-size: 15px;
+    font-size: 12px;
     color: #a9a9aa;
   }
   .show_content{
@@ -189,7 +217,6 @@
   /*课程标题（共用）*/
   .Course_title{
     /*设置标题上边距*/
-
     padding: 30px 0px;
   }
   .Course_title strong{
@@ -210,7 +237,7 @@
   }
   /*精品视频展示*/
   .Course_show{
-    margin-bottom: 100px;
+    margin-bottom: 260px;
   }
   .Course_show .left{
     width: 40%;
@@ -236,6 +263,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 8px;
+    overflow-x: hidden;
   }
 
   .price{

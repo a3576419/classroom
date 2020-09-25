@@ -17,6 +17,4 @@
 <style>
     @import "assets/css/base.css";
     @import "assets/css/common.css";
-
-
 </style>

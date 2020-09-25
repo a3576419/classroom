@@ -1,3 +1,4 @@
+<!--home页 课程右边展示-->
 <template>
   <div class="goods_item">
     <div class="goods_info">
@@ -34,19 +35,19 @@
     width: 33.3%;
   }
   .goods_info{
-    width: 303px;
+    width: 220px;
   }
  .goods_info img{
    /*图片宽度沾满整个框*/
    /*width: 100%;*/
    /*height: 150px;*/
-   width: 300px;
-   height: 150px;
+   width: 220px;
+   height: 110px;
    margin-bottom: 15px;
  }
  .goods_info p{
    /*标题*/
-   font-size: 25px;
+   font-size: 18px;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;

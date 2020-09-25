@@ -28,7 +28,8 @@
 
 <style scoped>
   .footer{
-    /*position: relative;*/
+    position: relative;
+
   }
   .foot{
     height: 200px;

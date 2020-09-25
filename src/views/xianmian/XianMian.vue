@@ -3,13 +3,20 @@
     <div class="xianmian-img">
       <img src="~assets/img/temporary/course_top_banner.png" alt="">
     </div>
-    <GoodsList :goods="goods"></GoodsList>
+    <div class="XianMian_list">
+      <GoodsList :goods="goods"></GoodsList>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+  //获取限免数据
   import {getXianMianList} from "@/network/XianMian";
+  //封装的课程列表组件
   import GoodsList from "@/components/content/goods/GoodsList";
+  //底部
+  import Footer from "@/components/common/footer/Footer";
   export default {
     name: "XianMian",
     data(){
@@ -27,7 +34,8 @@
       });
     },
     components:{
-      GoodsList
+      GoodsList,
+      Footer
     }
   }
 </script>
@@ -42,4 +50,8 @@
     display: block;
     margin: 0 auto;
   }
+  .XianMian_list{
+    margin-bottom: 260px;
+  }
+
 </style>

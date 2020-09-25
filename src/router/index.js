@@ -21,7 +21,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '',
+    path: '/',
     name: '重定向',
     redirect:'/home',
     meta:{

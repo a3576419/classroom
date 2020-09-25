@@ -6,14 +6,23 @@
     </div>
     <!-- 课程分类选项卡-->
     <TabControl :titles="['全部','电商营销','亚马逊课程','跨境电商']" @tabClick="tabClick"></TabControl>
-    <GoodsList :goods="goods[goodstype]"></GoodsList>
+    <div class="jingpin_list">
+      <GoodsList :goods="goods[goodstype]"></GoodsList>
+    </div>
+      <Footer></Footer>
   </div>
+
 </template>
 
 <script>
+  //获取精品数据
   import {getJingPinList} from "@/network/JingPin";
+  //分类--标题选项卡
   import TabControl from "@/components/content/tabControl/TabControl";
+  //封装的课程列表显示组件
   import GoodsList from "@/components/content/goods/GoodsList";
+  //底部
+  import Footer from "@/components/common/footer/Footer";
   export default {
     name: "JingPin",
     data(){
@@ -49,6 +58,7 @@
     components:{
       TabControl,
       GoodsList,
+      Footer
     },
     methods:{
       // 实现标题卡组件$emit来的方法
@@ -77,6 +87,9 @@
 </script>
 
 <style scoped>
+  .jingpin{
+    height: 100%;
+  }
   .jingpin-img{
     background-color: #e8ecf0;
     margin-bottom: 30px;
@@ -86,6 +99,9 @@
     height: 260px;
     display: block;
     margin: 0 auto;
+  }
+  .jingpin_list{
+    margin-bottom: 260px;
   }
 </style>
 

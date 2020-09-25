@@ -40,15 +40,15 @@
     /*给最外边设置边框*/
     /*width: 310px;*/
     /*border: solid 3px gainsboro;*/
-    width: 363px;
+    width: 286px;
     border: solid 3px gainsboro;
   }
  .goods_info img{
    /*图片宽度沾满整个框*/
    /*width: 100%;*/
    /*height: 150px;*/
-   width: 360px;
-   height: 180px;
+   width: 280px;
+   height: 135px;
    margin-bottom: 15px;
  }
  .goods_info p{
@@ -68,7 +68,7 @@
    font-size: 23px;
    color: red;
    font-weight: bold;
-   margin-left: 12px;
+   margin-left: 8px;
  }
   /*带横线的价格*/
   .goods_info del{
@@ -78,7 +78,6 @@
  .collect{
    /*多少人看过*/
    color: #a9a9aa;
-   margin-right: 15px;
  }
  /*最下面三行*/
  .info_down{

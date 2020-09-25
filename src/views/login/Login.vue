@@ -1,12 +1,16 @@
 <template>
-  <div class="login">
-    登录
+  <div class="login banxin">
+    <ElCarousel></ElCarousel>
   </div>
 </template>
 
 <script>
+  import ElCarousel from "@/components/content/elCarousel/ElCarousel";
   export default {
-    name: "Login"
+    name: "Login",
+    components:{
+      ElCarousel
+    }
   }
 </script>
 

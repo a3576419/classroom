@@ -1,7 +1,7 @@
-/**{*/
-/*	padding: 0;*/
-/*	margin: 0;*/
-/*}*/
+*{
+	padding: 0;
+	margin: 0;
+}
 ul,ol{
 	list-style: none;
 }
@@ -10,7 +10,7 @@ ul,ol{
 /*}*/
 a{
 	text-decoration: none;
-	color: #646464;
+	color: black;
 }
 /*h1,h2,h3{*/
 /*	font-size: 16px;*/
@@ -27,8 +27,9 @@ a{
 	clear: both;
 }
 .banxin{
-	width: 1600px;
+	width: 1250px;
 	margin: 0 auto;
+  /*height: 0;*/
 	position: relative;
 }
 .tonglan{
