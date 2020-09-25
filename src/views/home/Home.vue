@@ -7,7 +7,8 @@
 <!--        <img src="~assets/img/temporary/course_top_banner.png" alt="">-->
 <!--      </SwiperItem>-->
 <!--    </Swiper>-->
-
+<!--    头部-->
+<!--    <Header></Header>-->
 <!--    轮播图-->
     <div class="banner banxin">
       <ElCarousel></ElCarousel>

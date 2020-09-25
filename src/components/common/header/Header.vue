@@ -17,11 +17,11 @@
               </td>
               <td class="head-right">
                 <!-- <a href=""><router-link to="/login">登录 |</router-link></a>-->
-                <router-link to="/login">登录 |</router-link>
+<!--                <router-link to="/login">登录 |</router-link>-->
                 <a href=""><router-link to="/logup" style="margin-right: 30px"> 免费注册</router-link></a>
 <!--                    点击的方式跳转路由-->
 <!--                <span @click="logup_click">免费注册</span>-->
-<!--                <span @click="login_click">登录  |</span>-->
+                <span @click="login_click">登录  |</span>
               </td>
             </tr>
           </table>
@@ -34,7 +34,11 @@
     name: "Head",
     methods:{
       login_click(){
-      this.$router.push('/login')
+          let routeUrl = this.$router.resolve({
+            path: "/login",
+          });
+          window.open(routeUrl .href, '_blank');
+
       },
       logup_click(){
 

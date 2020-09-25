@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Header from "@/components/common/header/Header";
 // import Home from "@/views/home/Home";
 // import Login from "@/views/login/Login";
 // import Logup from "@/views/logup/Logup";
@@ -21,9 +22,9 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: '重定向',
-    redirect:'/home',
+    path: '',
+    redirect: '/home',
+    component: Header,
     meta:{
       title:'首页'
     }
