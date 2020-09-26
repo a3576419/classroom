@@ -10,9 +10,9 @@
     </tr>
     <tr>
       <td>
-          <ul>
-            <li>快乐课堂有限公司   |  0000000000000000 ©2020-2020 happy.com</li>
-          </ul>
+        <a>快乐课堂有限公司</a>|
+        <a>0000000000000000 ©2020-2020 happy.com</a>
+
       </td>
     </tr>
   </table>
@@ -42,7 +42,7 @@
   }
   .foot a{
     color: white;
-    margin-right: 30px;
+    margin: 30px;
   }
   .foot ul{
     display: inline;

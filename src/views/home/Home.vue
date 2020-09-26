@@ -1,12 +1,5 @@
 <template>
   <div class="home">
-<!--    <Swiper>-->
-<!--      <SwiperItem>-->
-<!--        <img src="~assets/img/temporary/course_top_banner.png" alt="">-->
-<!--      </SwiperItem> <SwiperItem>-->
-<!--        <img src="~assets/img/temporary/course_top_banner.png" alt="">-->
-<!--      </SwiperItem>-->
-<!--    </Swiper>-->
 <!--    头部-->
 <!--    <Header></Header>-->
 <!--    轮播图-->
@@ -120,7 +113,6 @@
 <script>
   // 头部
   import Header from "@/components/common/header/Header";
-  // import {Swiper, SwiperItem } from "@/components/content/swiper";
   // 获取精品视频数据
   import {getJingPinList} from "@/network/JingPin";
   // 获取限免视频数据
@@ -152,7 +144,68 @@
         //     market_price:''
         //   },
         // ],
+        goods:{
+          goods_all: [
+            {
+              cover_url:require("@/assets/img/jingPin/kuaJing.jpg"),
+              title:'亚马逊跨境电商运营公开课海星跨境',
+              price:'299.00',
+              market_price:'699.00',
+              courseCount:'6'
+            },
+            {
+              cover_url: require("@/assets/img/jingPin/yaMaXun.jpg"),
+              title:'跨境电商亚马逊如何选择',
+              price:'59.9',
+              market_price:'599.00',
+              courseCount:'3'
+            },
+            {
 
+              cover_url: require("@/assets/img/jingPin/yingXiao.jpg"),
+              title:'跨境电商亚马逊Listing优化',
+              price:'99.90',
+              market_price:'799.00',
+              courseCount:'1'
+            },
+          ],
+          goods_yingxiao:[
+            {
+              cover_url: require("@/assets/img/jingPin/yingXiao.jpg"),
+              title:'跨境电商亚马逊Listing优化',
+              price:'99.90',
+              market_price:'799.00',
+              courseCount:'1'
+            },
+          ],
+          goods_yamaxun:[
+            {
+              cover_url: require("@/assets/img/jingPin/yaMaXun.jpg"),
+              title:'跨境电商亚马逊如何选择',
+              price:'59.9',
+              market_price:'599.00',
+              courseCount:'3'
+            },
+          ],
+          goods_kuajing:[
+            {
+              cover_url:require("@/assets/img/jingPin/kuaJing.jpg"),
+              title:'亚马逊跨境电商运营公开课海星跨境',
+              price:'299.00',
+              market_price:'699.00',
+              courseCount:'6'
+            },
+          ],
+        },
+        xianMian_goods:[
+          {
+            cover_url:require("@/assets/img/jingPin/xianMian.jpg"),
+            title:'亚马逊跨境电商运营公开课海星跨境',
+            price:'免费',
+            market_price:'0.00',
+            courseCount:'6'
+          },
+        ],
       }
     },
   components: {
@@ -197,9 +250,10 @@
   /*顶部轮播Banner*/
     .banner{
       border-radius: 30px;
-      margin-top: 14px;
+      margin-top: 10px;
       /*width: 100%;*/
-      height: 400px;
+      height: 300px;
+      margin-bottom: 50px;
   }
   /*课堂介绍*/
   .home_show ul{

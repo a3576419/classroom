@@ -9,7 +9,7 @@
 <template>
     <el-carousel class="home_banner"  :interval="3000">
       <el-carousel-item v-for="item in imgList" :key="item.name">
-        <img :src="item.src"  alt="图片丢失了" :title="item.title" />
+        <img :src="item.src"  :title="item.title" />
       </el-carousel-item>
     </el-carousel>
 </template>
@@ -22,24 +22,20 @@
       return {
         imgList: [
           {
-            name: "lj",
-            src: require("@/assets/img/home/lunbo1.png"),
-            title: "这是lj.png"
+            src: require("@/assets/img/banner/home_lunbo1.png"),
+            title: "1"
           },
           {
-            name: "logo",
-            src: require("@/assets/img/temporary/home_top_banner.png"),
-            title: "这是logo.png"
+            src: require("@/assets/img/banner/home_lunbo2.jpg"),
+            title: "2"
           },
           {
-            name: "lj",
-            src: require("@/assets/img/home/lunbo1.png"),
-            title: "这是lj.png"
+            src: require("@/assets/img/banner/home_lunbo3.jpg"),
+            title: "3"
           },
           {
-            name: "logo",
-            src: require("@/assets/img/temporary/home_top_banner.png"),
-            title: "这是logo.png"
+            src: require("@/assets/img/banner/home_lunbo4.jpg"),
+            title: "4"
           },
         ]
       };
@@ -57,7 +53,7 @@
   text-align: center;
 }
 .home_banner img{
-  height:360px;
+  height:300px;
   width:100%;
   border-radius: 15px;
   margin: 0 auto;

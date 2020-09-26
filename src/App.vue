@@ -1,15 +1,18 @@
 <template>
   <div class="app">
-    <Root></Root>
+    <Header></Header>
+<!--    <Home></Home>-->
   </div>
 </template>
 
 <script>
-  import Root from "@/views/Root";
+  import Header from "@/components/common/header/Header";
+  import Home from "@/views/home/Home";
     export default {
         name: "APP",
         components:{
-          Root,
+          Header,
+          Home
         },
     }
 </script>

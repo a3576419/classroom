@@ -12,7 +12,7 @@
 
 <script>
   //获取限免数据
-  import {getXianMianList} from "@/network/XianMian";
+  // import {getXianMianList} from "@/network/XianMian";
   //封装的课程列表组件
   import GoodsList from "@/components/content/goods/GoodsList";
   //底部
@@ -26,8 +26,8 @@
           {
             cover_url:require("@/assets/img/jingPin/xianMian.jpg"),
             title:'亚马逊跨境电商运营公开课海星跨境',
-            price:'299.00',
-            market_price:'699.00',
+            price:'免费',
+            market_price:'0.00',
             courseCount:'6'
           },
         ]
