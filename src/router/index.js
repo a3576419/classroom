@@ -24,7 +24,6 @@ const routes = [
   {
     path: '',
     redirect: '/home',
-    component: Header,
     meta:{
       title:'首页'
     }

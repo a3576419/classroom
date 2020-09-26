@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <Header v-if=""></Header>
+    <Header></Header>
 <!--    <Footer></Footer>-->
 <!--    <Home></Home>-->
   </div>

@@ -21,18 +21,27 @@
     name: "XianMian",
     data(){
       return{
-        goods:[]
+        // goods:[],
+        goods:[
+          {
+            cover_url:require("@/assets/img/jingPin/xianMian.jpg"),
+            title:'亚马逊跨境电商运营公开课海星跨境',
+            price:'299.00',
+            market_price:'699.00',
+            courseCount:'6'
+          },
+        ]
       }
     },
     //请求课程数据
-    created() {
-      let then = getXianMianList().then(res=>{
-        // '精品自学课的数据请求结果'
-        console.log(res);
-        this.goods.push(...res.data.data)
-        console.log(this.goods);
-      });
-    },
+    // created() {
+    //   let then = getXianMianList().then(res=>{
+    //     // '精品自学课的数据请求结果'
+    //     console.log(res);
+    //     this.goods.push(...res.data.data)
+    //     console.log(this.goods);
+    //   });
+    // },
     components:{
       GoodsList,
       Footer

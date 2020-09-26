@@ -2,7 +2,7 @@
 <!--1安装：npm i element-ui -S-->
 <!--2导入：在main.js-->
 <!--import ElementUI from 'element-ui'-->
-<!--import locale from 'element-ui/lib/locale/lang/en'-->
+<!--//import locale from 'element-ui/lib/locale/lang/en'-->
 <!--Vue.use(ElementUI, { locale })-->
 <!--//3引用css-->
 <!--import 'element-ui/lib/theme-chalk/index.css';-->

@@ -138,13 +138,21 @@
   name: 'Home',
     data(){
       return{
-        goods:{
-          goods_all: [],
-          goods_yingxiao:[],
-          goods_yamaxun:[],
-          goods_kuajing:[],
-        },
-        xianMian_goods:[],
+        // goods:{
+        //   goods_all: [],
+        //   goods_yingxiao:[],
+        //   goods_yamaxun:[],
+        //   goods_kuajing:[],
+        // },
+        // xianMian_goods:[
+        //   {
+        //     cover_url:'',
+        //     title:'',
+        //     price:'',
+        //     market_price:''
+        //   },
+        // ],
+
       }
     },
   components: {
@@ -157,22 +165,22 @@
     Footer
   },
     //请求课程数据
-    created() {
-      getJingPinList().then(res=>{
-        // '精品自学课的数据请求结果'
-        // console.log(res)
-        this.goods.goods_all.push(...res.data.goods)
-        this.goods.goods_yingxiao.push(this.goods.goods_all[2])
-        this.goods.goods_yamaxun.push(this.goods.goods_all[1])
-        this.goods.goods_kuajing.push(this.goods.goods_all[0])
-      });
-      getXianMianList().then(res=>{
-        // '限免课的数据请求结果'
-        // console.log(res);
-        this.xianMian_goods.push(...res.data.data)
-        console.log(this.xianMian_goods);
-      });
-    },
+    // created() {
+    //   getJingPinList().then(res=>{
+    //     // '精品自学课的数据请求结果'
+    //     // console.log(res)
+    //     this.goods.goods_all.push(...res.data.goods)
+    //     this.goods.goods_yingxiao.push(this.goods.goods_all[2])
+    //     this.goods.goods_yamaxun.push(this.goods.goods_all[1])
+    //     this.goods.goods_kuajing.push(this.goods.goods_all[0])
+    //   });
+    //   getXianMianList().then(res=>{
+    //     // '限免课的数据请求结果'
+    //     // console.log(res);
+    //     this.xianMian_goods.push(...res.data.data)
+    //     console.log(this.xianMian_goods);
+    //   });
+    // },
     methods:{
       linkTo () {
         let activeIndex = this.$refs.carousel.activeIndex

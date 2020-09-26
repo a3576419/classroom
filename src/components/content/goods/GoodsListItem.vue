@@ -4,6 +4,7 @@
       <!-- 最外层包裹a标签 点击可进入详情页-->
       <a href="http://www.zhao100.cn/paidCourseInfo/43">
       <img :src="goodsitem.cover_url" alt=""  />
+<!--      <img :src="goodsitem.cover_url" alt=""  />-->
       <p>{{ goodsitem.title }}</p>
       <span class="subtitle">{{ goodsitem.subtitle }}</span>
       <div class="info_down">

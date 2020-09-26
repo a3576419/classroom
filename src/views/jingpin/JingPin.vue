@@ -35,26 +35,79 @@
         //   'yaMaXun':{list:[]},
         //   'kuaJing':{list:[]},
         // }
+        // goods:{
+        //   goods_all: [],
+        //   goods_yingxiao:[],
+        //   goods_yamaxun:[],
+        //   goods_kuajing:[],
+        // },
         goods:{
-          goods_all: [],
-          goods_yingxiao:[],
-          goods_yamaxun:[],
-          goods_kuajing:[],
+          goods_all: [
+            {
+              cover_url:require("@/assets/img/jingPin/kuaJing.jpg"),
+              title:'亚马逊跨境电商运营公开课海星跨境',
+              price:'299.00',
+              market_price:'699.00',
+              courseCount:'6'
+            },
+            {
+              cover_url: require("@/assets/img/jingPin/yaMaXun.jpg"),
+              title:'跨境电商亚马逊如何选择',
+              price:'59.9',
+              market_price:'599.00',
+              courseCount:'3'
+            },
+            {
+
+              cover_url: require("@/assets/img/jingPin/yingXiao.jpg"),
+              title:'跨境电商亚马逊Listing优化',
+              price:'99.90',
+              market_price:'799.00',
+              courseCount:'1'
+            },
+          ],
+          goods_yingxiao:[
+            {
+              cover_url: require("@/assets/img/jingPin/yingXiao.jpg"),
+              title:'跨境电商亚马逊Listing优化',
+              price:'99.90',
+              market_price:'799.00',
+              courseCount:'1'
+            },
+          ],
+          goods_yamaxun:[
+            {
+              cover_url: require("@/assets/img/jingPin/yaMaXun.jpg"),
+              title:'跨境电商亚马逊如何选择',
+              price:'59.9',
+              market_price:'599.00',
+              courseCount:'3'
+            },
+          ],
+          goods_kuajing:[
+            {
+              cover_url:require("@/assets/img/jingPin/kuaJing.jpg"),
+              title:'亚马逊跨境电商运营公开课海星跨境',
+              price:'299.00',
+              market_price:'699.00',
+              courseCount:'6'
+            },
+          ],
         },
         goodstype:'goods_all'
       }
     },
     //请求课程数据
-    created() {
-      let then = getJingPinList().then(res=>{
-        // '精品自学课的数据请求结果'
-        console.log(res)
-        this.goods.goods_all.push(...res.data.goods)
-        this.goods.goods_yingxiao.push(this.goods.goods_all[2])
-        this.goods.goods_yamaxun.push(this.goods.goods_all[1])
-        this.goods.goods_kuajing.push(this.goods.goods_all[0])
-      });
-    },
+    // created() {
+    //   let then = getJingPinList().then(res=>{
+    //     // '精品自学课的数据请求结果'
+    //     console.log(res)
+    //     this.goods.goods_all.push(...res.data.goods)
+    //     this.goods.goods_yingxiao.push(this.goods.goods_all[2])
+    //     this.goods.goods_yamaxun.push(this.goods.goods_all[1])
+    //     this.goods.goods_kuajing.push(this.goods.goods_all[0])
+    //   });
+    // },
     components:{
       TabControl,
       GoodsList,
