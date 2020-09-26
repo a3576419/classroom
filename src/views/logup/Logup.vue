@@ -25,7 +25,7 @@
           <button>注册</button>
         </div>
           <div style="font-size: 20px">已有账号？<a href="http://localhost:8080/login" style="color: #f7c140">去登录</a></div>
-      </div>in
+      </div>
     </div>
 
   </div>
