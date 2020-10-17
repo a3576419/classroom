@@ -1,7 +1,7 @@
 <template>
   <div class="app">
-    <Header></Header>
-<!--    <Home></Home>-->
+    <Header v-if="!$route.meta.showNav"></Header>
+    <router-view></router-view>
   </div>
 </template>
 

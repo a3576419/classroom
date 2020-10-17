@@ -1,0 +1,2 @@
+检测用户名是否存在：http://csdcloud.cn:8081/classroom/sys/user?username=1                  method:get
+csdcloud.cn:8081/classroom/sys/user?username=xxx&password=xxx&rePasswoed=xxx    method:post

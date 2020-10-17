@@ -62,7 +62,8 @@ const routes = [
     name: '登录',
     component: Login,
     meta:{
-      title:'登录'
+      title:'登录',
+      showNav: true
     }
   },
   {
@@ -70,7 +71,8 @@ const routes = [
     name: '注册',
     component: Logup,
     meta:{
-      title:'注册'
+      title:'注册',
+      showNav: true
     }
   },
 ]

@@ -9,6 +9,27 @@ module.exports = {
         'views': '@/views',
       }
     }
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://way.jd.com', //对应服务器地址
+        changeOrigin: true, //允许跨域
+        ws: true,
+        pathRewrite: {
+          '^/api': ''}
+      },
+      //查找用户名存不存在
+      '/Logup': {
+        target: "http://csdcloud.cn:8081/",
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/Logup': ''
+        }
+      },
+    }
   }
+
 }
 

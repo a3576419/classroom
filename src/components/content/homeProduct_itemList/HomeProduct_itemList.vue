@@ -3,7 +3,7 @@
   <div class="goods_item">
     <div class="goods_info">
       <!-- 最外层包裹a标签 点击可进入详情页-->
-      <a href="http://www.zhao100.cn/paidCourseInfo/43">
+      <a href="">
       <img :src="goodsitem.cover_url" alt=""  />
       <p>{{ goodsitem.title }}</p>
       <div class="info_down">

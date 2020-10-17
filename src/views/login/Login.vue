@@ -1,5 +1,5 @@
 <template>
-  <div class="login banxin">
+  <div class="login">
     <!--      中间内容-->
     <div class="login_background">
       <div class="neiRong">
@@ -22,13 +22,13 @@
 
         <div class="info rigt" v-if="!iscodelogin">
           <img src="~assets/img/home/密码@2x.png" alt="">
-          <input type="password" placeholder="输入密码"></input>
-          <span>忘记密码</span>
+          <input type="password" placeholder="请输入密码"></input>
+          <span>忘 记 密 码</span>
         </div>
         <div class="logup_button">
           <button>登录</button>
         </div>
-        <div style="font-size: 20px">木有账号？<a href="http://localhost:8080/logup" style="color: #f7c140">去注册</a></div>
+        <div style="font-size: 20px">木有账号？<router-link to="/logup" style="color: #f7c140">去注册</router-link></div>
       </div>
     </div>
   </div>
@@ -60,18 +60,22 @@
 <style scoped>
   .login{
     width: 100%;
-    height: 1080px;
-    background: url('~@/assets/img/img/login_bg.png');
+    height: 100%;
+    background-image: url('~@/assets/img/img/login_bg.png');
+    background-repeat: no-repeat ;
+    background-size:100%;
+    position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     color: black;
   }
   .login_background{
     width: 700px;
-    height: 600px;
+    height: 500px;
     background-color: white;
     border-radius: 20px;
+    margin-top: 150px;
   }
   .neiRong{
     text-align: center;

@@ -54,14 +54,14 @@
           <span class="span2">解决你最想搞定的业务问题</span>
         </td>
         <td>
-          <a href="http://localhost:8080/jingPin">更多自学课程 ></a>
+          <router-link to="/jingPin">更多自学课程></router-link>
         </td>
       </tr>
     </table>
 <!-- 精品课程展示   -->
     <div class="Course_show banxin">
       <div class="left">
-        <a href="http://www.zhao100.cn/paidCourseInfo/43">
+        <a href="">
           <img :src="goods.goods_kuajing[0].cover_url" alt=""  />
           <p>{{ goods.goods_kuajing[0].title }}</p>
           <div class="down">
@@ -88,14 +88,14 @@
           <span class="span2">每一堂课解决一个职业小难点</span>
         </td>
         <td>
-          <a href="http://localhost:8080/xianMian">更多自学课程 ></a>
+          <router-link to="/xianMian">更多限免课程></router-link>
         </td>
       </tr>
     </table>
 <!-- 限免课程展示-->
     <div class="Course_show banxin">
       <div class="xianmian_left">
-      <a href="http://www.zhao100.cn/paidCourseInfo/43">
+      <a href="">
         <img :src="xianMian_goods[0].cover_url" alt=""  />
 <!--                                                                      这里报错-->
         <p>{{xianMian_goods[0].title}}</p>
@@ -125,6 +125,7 @@
   import ElCarousel from "@/components/content/elCarousel/ElCarousel";
   //底部
   import Footer from "@/components/common/footer/Footer";
+  import {getjingdong} from "@/network/JingDong";
 
   export default {
   name: 'Home',
@@ -218,7 +219,7 @@
     Footer
   },
     //请求课程数据
-    // created() {
+    created() {
     //   getJingPinList().then(res=>{
     //     // '精品自学课的数据请求结果'
     //     // console.log(res)
@@ -233,7 +234,12 @@
     //     this.xianMian_goods.push(...res.data.data)
     //     console.log(this.xianMian_goods);
     //   });
-    // },
+      //京东万象测试proxy
+      getjingdong().then(res=>{
+        console.log('-----------------京东万象------------------------')
+        console.log(res)
+      })
+    },
     methods:{
       linkTo () {
         let activeIndex = this.$refs.carousel.activeIndex
