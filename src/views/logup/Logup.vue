@@ -126,13 +126,24 @@
       },
       Submit(){
         if (this.username_success&&this.password_success&&this.confirmPassword_success){
-          submit(this.username,this.password,this.confirm_Password).then(res=>{
-            console.log(res)
+          username(this.username).then(res=>{
+            console.log(res.success)
+            this.username_success=res.success
             if (res.success){
-              alert('注册成功')
-              return
+              submit(this.username,this.password,this.confirm_Password).then(res=>{
+                console.log(res)
+                if (res.success){
+                  alert('注册成功')
+                  return
+                }
+              })
+            }else {
+              this.username_warning=true
+              this.username_success=false
+              this.username_null=false
             }
           })
+
         }else {
           alert('用户名或密码格式不对')
         }
