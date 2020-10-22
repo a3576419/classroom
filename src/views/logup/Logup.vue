@@ -8,7 +8,7 @@
         <form action="http://csdcloud.cn:8081/classroom/sys/user" method="post" autocomplete="off">
         <div class="info">
           <img src="~assets/img/home/iphone.png" alt="">
-          <input type="text"  placeholder="输入手机号" v-model="username" name="username" @blur="username_blur"></input>
+          <input type="text"  placeholder="请输入用户名" v-model="username" name="username" @blur="username_blur"></input>
           <img src="~assets/img/logup/success.png" alt="" v-if="username_success">
           <span v-if="username_warning" class="tiShi">用户名已存在</span>
           <span v-if="username_null" class="tiShi">用户名不能为空</span>
@@ -16,15 +16,15 @@
 
         <div class="info yanZhengMa">
           <img src="~assets/img/home/code.png" alt="">
-          <input type="text" placeholder="输入验证码" v-model="password" name="password"  @blur="password_blur"></input>
-          <span>获取验证码</span>
+          <input type="text" placeholder="请输入密码" v-model="password" name="password"  @blur="password_blur"></input>
+<!--          <span>获取验证码</span>-->
           <img src="~assets/img/logup/success.png" alt="" v-if="password_success" >
           <span v-if="password_null" class="tiShi">密码不能为空</span>
         </div>
 
         <div class="info">
           <img src="~assets/img/home/密码@2x.png" alt="">
-          <input type="password" placeholder="输入密码" @blur="confirmPassword_blur" name="rePassword" v-model="confirm_Password"></input>
+          <input type="password" placeholder="请再次输入密码" @blur="confirmPassword_blur" name="rePassword" v-model="confirm_Password"></input>
           <img src="~assets/img/logup/success.png" alt="" v-if="confirmPassword_success" >
           <span v-if="confirmPassword_warning" class="tiShi">两次密码不一致</span>
           <span v-if="confirmPassword_null" class="tiShi">确认密码不能为空</span>
@@ -91,7 +91,7 @@
           return
         }
         // console.log("username_blur事件被执行了")
-        console.log(this.username)
+
       },
       // 密码失去焦点触发事件
       password_blur(){
@@ -202,9 +202,6 @@
     color: black;
     /*解决点击时出现默认边框*/
     outline:none;
-  }
-  .yanZhengMa input{
-    width: 70%;
   }
   .yanZhengMa span{
     color: #f7c140;

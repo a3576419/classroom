@@ -20,12 +20,12 @@ module.exports = {
           '^/api': ''}
       },
       //查找用户名存不存在
-      '/Logup': {
+      '/login_logup': {
         target: "http://csdcloud.cn:8081/",
         ws: true,
         changeOrigin: true,
         pathRewrite: {
-          '^/Logup': ''
+          '^/login_logup': ''
         }
       },
     }

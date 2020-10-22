@@ -8,11 +8,15 @@ import ElementUI from 'element-ui'
 // 2.引用css文件样式
 import 'element-ui/lib/theme-chalk/index.css';
 
+
+
 //3.使用组件
 Vue.use(ElementUI)
 // Vue.use(ElementUI, { locale })
 
 Vue.config.productionTip = false
+
+
 
 new Vue({
   router,
